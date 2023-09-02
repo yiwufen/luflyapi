@@ -1,0 +1,64 @@
+INFO 2023-09-02 17:21:36,577 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 17:24:45,880 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 17:25:16,685 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 17:25:17,304 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 17:26:48,441 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 17:26:55,690 basehttp 212 "GET / HTTP/1.1" 200 10664
+INFO 2023-09-02 20:27:00,999 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:27:02,409 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:27:07,335 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:27:08,014 autoreload 668 Watching for file changes with StatReloader
+ERROR 2023-09-02 20:27:46,029 exception 124 Invalid HTTP_HOST header: 'www.luffycity.cn:8000'. You may need to add 'www.luffycity.cn' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "G:\study_area\python_Envs\lufly\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "G:\study_area\python_Envs\lufly\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "G:\study_area\python_Envs\lufly\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "G:\study_area\python_Envs\lufly\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.luffycity.cn:8000'. You may need to add 'www.luffycity.cn' to ALLOWED_HOSTS.
+WARNING 2023-09-02 20:27:46,475 log 241 Bad Request: /
+WARNING 2023-09-02 20:27:46,477 basehttp 212 "GET / HTTP/1.1" 400 75355
+INFO 2023-09-02 20:28:08,002 basehttp 212 "GET / HTTP/1.1" 200 10664
+WARNING 2023-09-02 20:28:08,129 log 241 Not Found: /favicon.ico
+WARNING 2023-09-02 20:28:08,130 basehttp 212 "GET /favicon.ico HTTP/1.1" 404 2116
+INFO 2023-09-02 20:29:36,476 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:29:37,323 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:29:57,372 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:29:58,303 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:30:20,436 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:30:21,207 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:30:59,892 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:31:01,514 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:55:42,745 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:55:43,722 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:56:03,704 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 20:56:04,582 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 20:59:12,760 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 21:00:01,295 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:02:16,025 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:12:17,188 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:12:27,258 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:14:55,606 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 21:14:56,555 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:14:59,587 basehttp 212 "GET / HTTP/1.1" 200 10664
+INFO 2023-09-02 21:16:42,382 autoreload 266 D:\project_entire\django\lufly\lufly\urls.py changed, reloading.
+INFO 2023-09-02 21:16:43,134 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:16:48,094 autoreload 266 D:\project_entire\django\lufly\lufly\urls.py changed, reloading.
+INFO 2023-09-02 21:16:48,753 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:17:17,518 autoreload 266 D:\project_entire\django\lufly\lufly\urls.py changed, reloading.
+INFO 2023-09-02 21:17:18,241 autoreload 668 Watching for file changes with StatReloader
+WARNING 2023-09-02 21:19:25,980 log 241 Not Found: /mdia
+WARNING 2023-09-02 21:19:25,994 basehttp 212 "GET /mdia HTTP/1.1" 404 2219
+INFO 2023-09-02 21:19:32,119 basehttp 212 "GET /media HTTP/1.1" 301 0
+WARNING 2023-09-02 21:19:32,135 log 241 Not Found: /media/
+WARNING 2023-09-02 21:19:32,136 basehttp 212 "GET /media/ HTTP/1.1" 404 2393
+INFO 2023-09-02 21:29:13,248 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 21:29:14,017 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:30:22,043 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 21:31:46,100 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:34:00,683 autoreload 266 D:\project_entire\django\lufly\lufly\settings\dev.py changed, reloading.
+INFO 2023-09-02 21:34:01,331 autoreload 668 Watching for file changes with StatReloader
+INFO 2023-09-02 21:34:11,498 autoreload 668 Watching for file changes with StatReloader
