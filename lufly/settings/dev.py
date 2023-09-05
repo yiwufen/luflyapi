@@ -30,6 +30,7 @@ SECRET_KEY = 'django-insecure-n#v*54vui3-p8)ws!zpjk+jhmhv&nq)ciqb31#vcmg0v1ajmwg
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'api.luffycity.cn',
 ]
 
@@ -39,12 +40,14 @@ CORS_ORIGIN_WHITELIST = (
 )
 CORS_ALLOW_CREDENTIALS = False  # 允许ajax跨域请求时携带cookie
 
-# 访问静态文件的url地址前缀
-STATIC_URL = '/static/'
+# # 访问静态文件的url地址前缀
+# STATIC_URL = '/static/'
 # 设置django的静态文件目录
-STATICFILES_DIRS = [
-    os.path.join(os.path.dirname(BASE_DIR),"static")
-]
+# STATICFILES_DIRS = [
+#     os.path.join(os.path.dirname(BASE_DIR),"static")
+# ]
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static') # python manage.py collectstatic
 
 # 项目中存储上传文件的根目录[暂时配置]，注意，uploads目录需要手动创建否则上传文件时报错
 MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR),"uploads")
@@ -53,11 +56,31 @@ MEDIA_URL ="/media/"
 
 # Application definition
 
+#
+# [jet] 从 Django 3.0 开始，X_FRAME_OPTIONS设置的默认值从 SAMEORIGIN 更改为 DENY。这可能会导致弹出窗口（如字段查找弹出窗口）出错
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+JET_DEFAULT_THEME = 'light-violet'  # Django JET theme. `default` is the default theme.
+JET_SIDE_MENU_COMPACT = True  # Mini side menu
+
+# Application name. Default is 'Django JET'
+# JET_APPLICATION_NAME = 'lufly'
+JET_APPLICATION_NAME = "Your Desired Application Name"
+
+# Site title of index page. Default is 'Django JET Dashboard'.
+# JET_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
+
+# Site title. Default is 'Django site admin'.
+JET_SITE_TITLE = 'Site Admin'
+
+
 # 新增一个系统导包路径
 import sys
 sys.path.insert(0,os.path.join(BASE_DIR,"apps"))
 
 INSTALLED_APPS = [
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,19 +113,21 @@ ROOT_URLCONF = 'lufly.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': []
-        ,
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.debug',
+
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'lufly.wsgi.application'
 
