@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
 
 # CORS组的配置信息
 CORS_ORIGIN_WHITELIST = (
-    'https://www.luffycity.cn:8080',
+    'http://www.luffycity.cn:8080',
 )
 CORS_ALLOW_CREDENTIALS = False  # 允许ajax跨域请求时携带cookie
 
@@ -79,6 +79,7 @@ import sys
 sys.path.insert(0,os.path.join(BASE_DIR,"apps"))
 
 INSTALLED_APPS = [
+    ''
     'jet.dashboard',
     'jet',
     'django.contrib.admin',
@@ -94,7 +95,7 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     # 异常处理
-    'EXCEPTION_HANDLER': 'luffy.utils.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'lufly.utils.exceptions.custom_exception_handler',
 }
 
 MIDDLEWARE = [
