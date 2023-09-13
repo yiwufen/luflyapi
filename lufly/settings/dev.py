@@ -91,11 +91,28 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'home',
+    'user',
+    'rest_framework_simplejwt',
 ]
+
+"""user"""
+AUTH_USER_MODEL = 'user.User'
+AUTHENTICATION_BACKENDS = ['user.utils.UsernameOrMobileModelBackend']
 
 REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'lufly.utils.exceptions.custom_exception_handler',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
 MIDDLEWARE = [
