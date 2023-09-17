@@ -79,7 +79,6 @@ import sys
 sys.path.insert(0,os.path.join(BASE_DIR,"apps"))
 
 INSTALLED_APPS = [
-    ''
     'jet.dashboard',
     'jet',
     'django.contrib.admin',
@@ -93,11 +92,34 @@ INSTALLED_APPS = [
     'home',
     'user',
     'rest_framework_simplejwt',
+    'captcha',
+    'django_celery_beat',
 ]
 
 """user"""
 AUTH_USER_MODEL = 'user.User'
-AUTHENTICATION_BACKENDS = ['user.utils.UsernameOrMobileModelBackend']
+AUTHENTICATION_BACKENDS = [
+    'user.utils.UsernameOrMobileModelBackend'
+]
+
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+# 定时任务
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+
 
 REST_FRAMEWORK = {
     # 异常处理
@@ -108,6 +130,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
 }
+
+
 from datetime import timedelta
 
 SIMPLE_JWT = {
