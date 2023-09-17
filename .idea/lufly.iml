@@ -14,7 +14,11 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+<!-- <<<<<<< HEAD -->
     <orderEntry type="jdk" jdkName="Python 3.10 (luflyapi)" jdkType="Python SDK" />
+<!-- ======= -->
+    <!-- <orderEntry type="jdk" jdkName="Python 3.10 (lufly)" jdkType="Python SDK" />
+>>>>>>> fd20cf94786eb2acad39e96235ee9bbdfb0898ee -->
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
